@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang=pl_PL>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'moj.css' %}">
+</head>
+<body>
+    <p>Lista wpływów i wydatków</p>
+
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Kategoria</th>
+            <th>Rodzaj</th>
+            <th>Kwota</th>
+        </tr>
+        {% for position in rotation %}
+        <tr>
+            <td>{{position.name}}</td>
+            <td>{{position.category}}</td>
+            <td>{{position.flow}}</td>
+            <td>{{position.how_much}} zł</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

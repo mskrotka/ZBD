@@ -1,0 +1,17 @@
+h3 {
+    color: #FF0000;
+}
+
+th, td  {
+    padding: 10px;
+}
+
+th {
+    background: #696969;
+    color: white;
+    text-align: left;
+}
+
+tr, td {
+    border: 1px solid #696969;
+}
