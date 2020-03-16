@@ -11,6 +11,9 @@
 </head>
 <body>
     <p>Lista wpływów i wydatków</p>
+    <a href="{% url 'nowa_wartosc' %}">Dodaj nowy film</a>
+    <br>
+    <br>
 
     <table>
         <tr>
@@ -18,6 +21,8 @@
             <th>Kategoria</th>
             <th>Rodzaj</th>
             <th>Kwota</th>
+            <th>Edycja</th>
+            <th>Kasuj</th>
         </tr>
         {% for position in rotation %}
         <tr>
@@ -25,7 +30,13 @@
             <td>{{position.category}}</td>
             <td>{{position.flow}}</td>
             <td>{{position.how_much}} zł</td>
+            <td><a href="{% url 'edytuj_wartosc' position.id%}">Edytuj</a></td>
+            <td><a href="{% url 'kasuj_wartosc' position.id%}">Kasuj</a></td>
         </tr>
+        {% endfor %}
+
+        {% for position in rotation %}
+            {{position.how_much}}
         {% endfor %}
 
     </table>

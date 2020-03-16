@@ -120,3 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ['moje_static']
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'lista_wszystkiego'
